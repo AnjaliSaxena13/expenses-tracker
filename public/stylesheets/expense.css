@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.addex {
+    text-align: center;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    margin: 3vw;
+    padding: 5vw;
+}
+
+.addex h1 {
+    text-transform: capitalize;
+    word-spacing: 0.5vw;
+    font-size: 2.3vw;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    color: rgb(79, 18, 137);
+
+}
+
+.addex form input {
+    padding: 1vw 1.6vw;
+    color: black;
+    border-radius: 1vw;
+    font-size: 1.2vw;
+}
+
+.addex input:hover {
+    border: solid black;
+    transition: all ease 0.7s;
+    cursor: pointer;
+}
+
+.addex select {
+    padding: 1vw 5vw;
+    color: black;
+    border-radius: 1vw;
+    border: solid #676161;
+    font-size: 1.2vw;
+
+}
+.addex select:hover {
+    border: solid black;
+    transition: all ease 0.7s;
+    cursor: pointer;
+}
+
+.addex button {
+    padding: 0.9vw 3vw;
+    background-color: rgb(9, 11, 69);
+    border-bottom-left-radius: 0.8vw ;
+    border-top-right-radius: 0.8vw ;
+border: none;
+    color: white;
+    font-weight: 600;
+    margin-top: 0.4vw;
+}
+.addex button:hover{
+    background-color: rgb(169, 184, 224);
+    color: black;
+    border: solid rgb(24, 24, 122);
+    cursor: pointer;
+transition: all ease 0.5s;
+}
+.addex a{
+    margin: 1vw;
+    font-size: 1.4vw;
+    font-weight: 600;
+    color: black;
+}

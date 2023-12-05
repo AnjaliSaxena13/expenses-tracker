@@ -1,0 +1,23 @@
+<h1>this is your expenses</h1>
+
+<div class="infor">
+    <% expenses.forEach((j)=>{%>
+        <%=j.createdAt %>
+        
+        <h1>
+            <%= j.amount %>
+        </h1>
+        <h1>
+            <%= j.remark %>
+        </h1>
+        <h1>
+            <%= j.category %>
+        </h1> 
+        <h1>
+            <%= j.paymentmode %>
+        </h1>
+
+        <a href="/update/<%= j._id %>">update</a>
+        <a href="/delete/<%= j._id %>">delete</a>
+        <% }) %>
+</div>

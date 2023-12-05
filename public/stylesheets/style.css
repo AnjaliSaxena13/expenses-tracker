@@ -1,0 +1,461 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html
+body
+{
+width: 100vw;
+height: 100vh;
+}
+
+.nav{
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #5db699;
+padding:2vw 5vw ;
+}
+.nav a{
+  text-decoration: none;
+  font-family: Aloevera;
+  font-size: 3vmax;
+  color: #481281;
+}
+.nav i {
+  font-size: 2.3vw;
+  font-weight: 600;
+  display: none;
+}
+
+.signin a{
+  font-size: 1.7vw;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  /* border: solid rgb(106, 104, 104) ; */
+  border-radius: 1.3vw;
+  padding: 0.7vw;
+  color: rgb(255, 255, 255);
+  background-color: #000;
+  margin: 1vw;
+}
+.home{
+  text-align: center;
+  /* background-color: blue; */
+  
+}
+.home p {
+  font-size: 2vw;
+  font-family: sans-serif;
+font-weight: 600;
+margin: 3vw;
+}
+.home h1{
+  
+  font-size: 3.7vmax;
+  font-family: 'Lucida Sans';
+  margin: -1.5vw;
+  color: #004AA6;
+}
+.home .image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  margin: 2.3vw;
+}
+.home .img1{
+  width:30vw;
+   height: 80vh;
+   background-color: #000;
+   background-image: url(https://i.pinimg.com/564x/ed/94/b3/ed94b399aba955e204a66463e68e0fcc.jpg);
+   background-position: center;
+   background-size: cover;
+   
+ }
+.home .img2{
+ width: 40vw;
+  height: 75vh;
+  background-color: #000;
+  background-image: url(https://cdn.dribbble.com/users/1316562/screenshots/4075726/media/57bfa7456d3d8143e357c8cc13bb028f.gif);
+  background-position: center;
+  background-size: cover;
+
+}
+/* .home .img3{
+  width: 65vw;
+   height: 85vh;
+   background-color: #000;
+   background-image: url(https://i.pinimg.com/564x/e9/94/82/e99482adc1733c3743033123f0dddef2.jpg);
+   background-position: center;
+   background-size: cover;
+
+ } */
+.home a{
+  font-size: 1.7vw;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  border-bottom-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  padding: 0.8vw;
+  color: rgb(255, 255, 255);
+  background-color: #000;
+  margin: 1vw;
+  text-align: center;
+}
+.fullpage{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://storage.needpix.com/rsynced_images/black-bricks-background.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: contrast(1.1);
+}
+
+
+.page .boder{
+  width: 33%;
+  height: 65%;
+  background-color: #31303069;
+  position: absolute;
+  left: 50%;
+top: 50%;
+transform: translate(-50% ,-50%);
+border: transparent 8px ;
+border-top-left-radius: 12%; 
+border-bottom-right-radius: 12%;
+z-index: 0;
+overflow: hidden;
+}
+
+.page .login {
+  width: 96%;
+  height: 96%;
+  background-color: #030303;
+  position: absolute;
+  text-align: center;
+border: transparent 8px ;
+border-top-left-radius: 10%; 
+border-bottom-right-radius: 10%;
+z-index: 999;
+/* overflow: hidden; */
+left: 50%;
+top: 50%;
+transform: translate(-50% ,-50%);
+}
+
+.boder::before{
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg,transparent,transparent,
+  #45f3ff,#45f3ff,#25ecfa);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 5s linear infinite;
+} 
+@keyframes animate {
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+.login h1 {
+
+  margin: 6%;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  color: white;
+}
+
+ .login input {
+  padding: 14px 65px;
+  margin: 18px;
+  font-size: 19px;
+  font-weight: 600;
+  text-align: start;
+  border: none;
+  border-bottom: solid #fff;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  background-color: #000;
+}
+
+.login input:hover {
+  border: solid;
+  background-color: #fff;
+  color: #887a7a;
+}
+.login .p{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+.login p {
+  font-family: sans-serif;
+  color: rgb(130, 128, 128);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all ease 0.4s;
+  font-size: 1.3vw;
+} 
+ .login p:hover{
+  text-decoration:underline;
+}
+.login button{
+  padding: 8px 24px;
+  font-weight: 600;
+  margin: 5%;
+  margin-left: -53%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  font-size: 1.2 n   vw;
+}
+.login button:hover{
+  background-color: #4ce3e8;
+} 
+
+.login .reset{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4vw;
+ 
+}
+
+
+/* respossive */
+ @media (max-width:600px) {
+.nav{
+  background-color: rgb(51, 181, 62);
+  padding: 3vw;
+}
+.signin a{
+  display: none;
+}
+.nav i{
+display: block;
+font-size: 5vw;
+
+}
+.home p{
+  font-size: 3vw;
+}
+.home img{
+  height: 50vh;
+  margin-top: 2vh;
+}
+.home a{
+  font-size: 3.4vw;
+  padding: 2vw;
+}
+
+.page .boder{
+  width: 80vw;
+  height: 50vh;
+}
+
+.login h1 {
+  font-size: 6vw;
+}
+
+ .login input {
+  padding: 2.8vw 0.2vw;
+  margin: 0.8vw;
+}
+
+.login p {
+  font-size: 3.7vw;
+} 
+
+.login button{
+font-size: 3.5vw;
+padding: 2vw 3vw;
+}
+
+.login .reset{
+  margin-left: 12vw;
+}
+} 
+
+/* profile */
+
+.pnav{
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color:#0a7b55;
+margin: 1vw;
+padding: 1.4vw;
+}
+.pnav h1{
+  font-size: 2.4vw;
+  font-family: Aloevera;
+  color: #fff;
+}
+.navbutton{
+display: flex;
+gap: 1.8vw;
+}
+.navbutton button{
+  padding: 1vw 2.7vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+background-color: #000;
+color: white;
+border-radius: 3vw;
+}
+.navbutton button a{
+  color: white;
+  text-decoration: none;
+}
+
+.profilepage h1{
+  text-align: center;
+  font-size: 2w;
+  font-family: sans-serif;
+  margin-top: -3vw; 
+}  
+.balance{
+  text-align: center;
+padding: 1vw;
+  border: solid;
+  font-size: 1.7vw;
+  font-family:  monospace;
+  margin-left: 32vw;
+  margin-right: 32vw;
+background-color: #a0b0c2;
+}
+.balance h2{
+  color: #221866;
+}
+.history{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  background-color: rgb(171, 127, 127);
+  width: 28vw;
+  height: 4vw;
+  margin: 1vw;
+  margin-left: 36vw;
+  border: solid;
+  font-size: 2vw;
+}
+.history button{
+font-size: 1.4vw;
+border: none;
+background-color: transparent;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   width: 70vw; 
+     margin: 2vw;
+    margin-left: 15vw; 
+    font-size: 1.5vw;
+    font-weight: 500;
+  }
+.bottom table{
+  padding: 1.6vw;
+  background-color:rgb(213, 206, 206);
+  border: none;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.pronav a{
+font-size: 1.7vw;
+/* background-color: #525a64; */
+margin-left: 2vw;
+ font-weight: 700;
+}
+
+.pronav a:hover{
+  color: #000;
+}
+  
+.filter{
+  margin: 1.2vw;
+/* background-color: #25ecfa; */
+padding: 0.8vw;
+  text-align: center ;  
+}
+
+.filter p{
+  font-size: 1.6vw;
+font-weight: 600;
+}
+.filter form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.3vw;
+}
+.filter select, input, button{
+  padding: 0.4vw 1.8vw;
+  font-size: 1.3vw;
+  font-weight: 600;
+text-align: center;
+border-radius: 2vw;
+}
+.filter button:hover{
+background-color: black;
+color: white;
+transition: all ease 1.5s;
+}
+
+table th {
+  font-size: 1.7vw;
+  padding: 0.4vw 1.6vw;
+}
+
+/* table td {
+  font-size: 1.9vw;
+  color: black;
+}
+
+table tr i {
+  font-size: 1.8vw;
+  color: #f57693;
+} */
+
+
+
+@media (max-width:600px){
+
+
+.pnav{
+margin: 1.8vw;
+padding: 1.5vw;
+}
+.pnav h1{
+  font-size: 5vw;
+}
+.navbutton{
+gap: 1.8vw;
+}
+.navbutton button{
+  padding: 1vw 2.7vw;
+  font-size: 3vw;
+}
+.profilepage h1{
+  font-size: 5vw;
+}
+}
+
+

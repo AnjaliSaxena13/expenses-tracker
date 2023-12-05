@@ -1,0 +1,30 @@
+<%- include("header") %>
+    <div class="fullpage">
+        <form action="/send-mail" method="POST">
+
+            <div class="page">
+                <div class="boder">
+                    <div class="login">
+                        <h1>Forget Password</h1>
+                        <input type="email" placeholder="email" name="email" /><br><br>
+                        <div class="reset">
+
+                            <button>Send Mail</button>
+                            <p> or <a href="/signin">signin</a> </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </form>
+
+
+        <!-- <form action="/send-mail" method="POST">
+            <input type="email" placeholder="email" name="email" />
+            <button>Send Mail</button>
+            <br />
+        </form> -->
+    </div>
+    <%- include("footer") %>

@@ -1,0 +1,161 @@
+<%- include("header") %>
+
+    <div class="pnav">
+        <h1>Expense Tracker</h1>
+        <div class="navbutton"><button><a href="/logout">logout</a></button>
+            <button><a href="/reset">reset</a></button>
+        </div>
+    </div>
+    <div class="profilepage">
+
+        <br>
+      
+        <div class="pronav">
+            <a href="/profile">Daskboard</a><br> <br>
+            <!-- <a href="/history">History</a> -->
+            <a href="/expenses">add expenses</a>
+
+        </div>
+
+        <h1>👋Hello
+            <%= admin.username %>
+        </h1><br>
+
+        <div class="balance">
+            <h2>YOUR BALANCE</h2>
+            <h3>
+                <%= expenses.reduce((ac,cv)=> ac+cv.amount, 0)%>
+            </h3> 
+        </div>
+
+
+
+
+        <div class="filter">
+            <p>Filter your Expenses</p> <br>
+            <form action="/filter">
+                <select name="key" id="select">
+                    <option value=""hidden disabled selected>Filter</option>
+                    <option value="amount">Amount</option>
+                    <option value="remark">Remark</option>
+                    <option value="category">Category</option>
+                    <option value="paymentmode">Payment Mode</option>
+                    <option value="Date">Date</option>
+                </select>
+                <input type="text" name="value" placeholder="enter search term" />
+                <button>Search</button>
+            </form>
+        </div>
+
+
+
+        <div class="bottom">
+            <table border="1">
+                
+                <tr>
+                    <th>Date </th>
+                    <th>Amount </th>
+                    <th>Catagory</th>
+                    <th>paymode </th>
+                    <th>remark</th>
+                    <th>
+                        <i class="ri-delete-bin-line"></i> /
+                        <i class="ri-edit-line"></i>
+                    </th>
+                </tr>
+
+                <% expenses.forEach((e)=>{ %>
+                    <tr>
+                        <td>
+                            <%= e.createdAt %>
+                        </td>
+                        <td>
+                            <%= e.amount %>
+                        </td>
+                        <td>
+                            <%= e.category %>
+                        </td>
+                        <td>
+                            <%= e.paymentmode %>
+                        </td>
+                        <td>
+                            <%= e.remark%>
+                        </td>
+                        <td class="opt"> <a href="/delete/<%= e._id %>">Delete</a> &nbsp;
+                            <a href="/update/<%= e._id %>">Update</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+
+                        <!-- Add more rows as needed -->
+            </table>
+            <br>
+        </div>
+
+
+        <!-- <div class="bottom">
+
+                <div class="box2">
+                    <h3>date</h3>
+                    <hr>
+
+                </div>
+                <div class="box2 ">
+                    <h3>amount</h3>
+                    <hr>
+                </div>
+
+                <div class="box2">
+                    <h3>remark</h3>
+                    <hr>
+
+
+
+
+                </div>
+                <div class="box2">
+                    <h3>category</h3>
+                    <hr>
+
+                </div>
+                <div class="box2">
+                    <h3>payment mode</h3>
+                    <hr>
+
+
+                </div>
+
+            </div>
+            <div class="infor">
+                <% expenses.forEach((j)=>{%>
+                    <%=j.createdAt %>
+
+                        <h1>
+                            <%= j.amount %>
+                        </h1>
+                        <h1>
+                            <%= j.remark %>
+                        </h1>
+                        <h1>
+                            <%= j.category %>
+                        </h1>
+                        <h1>
+                            <%= j.paymentmode %>
+                        </h1>
+
+
+                        <a href="/update/<%= j._id %>">update</a>
+                        <a href="/delete/<%= j._id %>">delete</a>
+                        <% }) %>
+            </div> -->
+
+
+        <!-- <div class="history">
+                <p>cash</p><span>0.00rs</span>
+                <div class="del"><button>
+                        <a href="">Delete</a></button>
+                </div>
+            </div> -->
+    </div>
+
+    <%- include("footer") %>

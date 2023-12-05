@@ -1,0 +1,48 @@
+<!-- <%- include("header")%>
+<link rel="stylesheet" href="/stylesheets/reset.css">
+
+
+  <div id="main">
+    <div class="box">
+      <h1>reset your password</h1>
+      <form action="/reset" method="post">
+        <input type="password" name="oldpassword" placeholder="Enter your old password"> <br> <br>
+        <input type="password" name="newpassword" placeholder="Enter your new password"> <br> <br>
+        <button>Reset password</button>  
+      </form>
+    </div>
+  </div>
+
+
+
+  <%- include("footer")%> -->
+
+<%- include("header") %>
+  <div class="fullpage">
+    <div class="body">
+      <form action="/reset" method="post">
+
+
+        <div class="page">
+          <div class="boder">
+            <div class="login">
+              <h1>Reset your password</h1>
+              <input type="password" name="oldpassword" placeholder="Enter your old password"> <br> <br>
+              <input type="password" name="newpassword" placeholder="Enter your new password"> <br> <br>
+              <div class="reset">
+
+                <button>Reset password</button>
+                <p> <a href="/profile">Back</a> </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </form>
+    </div>
+  </div>
+  <%- include("footer") %>
